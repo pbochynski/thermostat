@@ -67,7 +67,7 @@ jobs:
     - name: Deploy controller
       run: |
         make deploy IMG=ghcr.io/${{ github.actor }}/thermostat:latest
-        while [[ $(kubectl get deployment -n thermostat-system kymactl-controller-manager -o 'jsonpath={..status.availableReplicas}') != 1 ]]; do echo "Waiting for thermostat controller to be available"; sleep 2; done
+        while [[ $(kubectl get deployment -n thermostat-system thermostat-controller-manager -o 'jsonpath={..status.availableReplicas}') != 1 ]]; do echo "Waiting for thermostat controller to be available"; sleep 2; done
 
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
