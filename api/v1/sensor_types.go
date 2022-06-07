@@ -43,7 +43,7 @@ type SensorStatus struct {
 
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
-
+//+kubebuilder:printcolumn:name="Temperature",type="string",JSONPath=".status.temperature"
 // Sensor is the Schema for the sensors API
 type Sensor struct {
 	metav1.TypeMeta   `json:",inline"`

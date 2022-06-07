@@ -15,7 +15,11 @@ spec:
     singular: sensor
   scope: Namespaced
   versions:
-  - name: v1
+  - additionalPrinterColumns:
+    - jsonPath: .status.temperature
+      name: Temperature
+      type: string
+    name: v1
     schema:
       openAPIV3Schema:
         description: Sensor is the Schema for the sensors API
