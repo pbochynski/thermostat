@@ -1,0 +1,25 @@
+domain: demo.pb
+layout:
+- go.kubebuilder.io/v3
+projectName: thermostat
+repo: github.com/pbochynski/thermostat
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: demo.pb
+  group: automation
+  kind: Thermostat
+  path: github.com/pbochynski/thermostat/api/v1
+  version: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: demo.pb
+  group: automation
+  kind: Sensor
+  path: github.com/pbochynski/thermostat/api/v1
+  version: v1
+version: "3"

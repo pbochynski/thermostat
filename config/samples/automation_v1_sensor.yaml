@@ -1,0 +1,22 @@
+apiVersion: automation.demo.pb/v1
+kind: Sensor
+metadata:
+  name: kitchen
+spec:
+  mockTemperature: 21
+---
+apiVersion: automation.demo.pb/v1
+kind: Sensor
+metadata:
+  name: living-room
+spec:
+  mockTemperature: 24
+---
+apiVersion: automation.demo.pb/v1
+kind: Sensor
+metadata:
+  name: bedroom
+spec:
+  mockTemperature: 19
+
+

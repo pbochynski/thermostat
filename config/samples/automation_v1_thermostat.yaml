@@ -1,0 +1,11 @@
+apiVersion: automation.demo.pb/v1
+kind: Thermostat
+metadata:
+  name: thermostat-sample
+spec:
+  temperature: 22
+  sensors:
+    - kitchen
+    - living-room
+    - bedroom
+

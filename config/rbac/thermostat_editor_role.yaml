@@ -1,0 +1,24 @@
+# permissions for end users to edit thermostats.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: thermostat-editor-role
+rules:
+- apiGroups:
+  - automation.demo.pb
+  resources:
+  - thermostats
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - automation.demo.pb
+  resources:
+  - thermostats/status
+  verbs:
+  - get

@@ -1,0 +1,20 @@
+# permissions for end users to view thermostats.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: thermostat-viewer-role
+rules:
+- apiGroups:
+  - automation.demo.pb
+  resources:
+  - thermostats
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - automation.demo.pb
+  resources:
+  - thermostats/status
+  verbs:
+  - get
