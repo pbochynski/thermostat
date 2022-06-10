@@ -3,7 +3,7 @@ kind: Sensor
 metadata:
   name: kitchen
 spec:
-  mockTemperature: 21
+  mockTemperature: 23
 ---
 apiVersion: automation.demo.pb/v1
 kind: Sensor

@@ -405,7 +405,7 @@ spec:
         - --leader-elect
         command:
         - /manager
-        image: controller:latest
+        image: ghcr.io/pbochynski/thermostat:latest
         livenessProbe:
           httpGet:
             path: /healthz

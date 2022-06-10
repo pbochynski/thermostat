@@ -1,9 +1,8 @@
 # thermostat
 
-Run controller:
+Install controller:
 ```
-make install 
-make deploy IMG=ghcr.io/pbochynski/thermostat:latest
+kubectl apply -f https://raw.githubusercontent.com/pbochynski/thermostat/main/registries.yaml
 ```
 
 Deploy resources:
